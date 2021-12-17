@@ -13,7 +13,7 @@
     <style>
         #map{
             height: 650px;
-            width: 950px;
+            width: 1000px;
         }
     </style>
 	<p>ENC222-0115/2018-This is a map to show customised pop ups</p>
@@ -30,7 +30,7 @@
 	}).addTo(map);
 
         var marker = L.marker([-1.09626573,37.01288458]).addTo(map);
-        marker.bindPopup("<b>This is jkuat!</b>").openPopup();
+        marker.bindPopup("<b>Jomo Kenyatta University of Agriculture and Technology!</b>").openPopup();
         var popup = L.popup().setLatLng([-1.093675, 36.998266]).setContent("I am a standalone popup.").openOn(map);
         var popup = L.popup();
      
