@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ENC222-0115/2018</title>
-	
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-    ENC222-0115/2018 - Map showing Pop Ups
-    <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    <title>ENC222-0131/2018</title>
 </head>
 <body>
-    <div id = "map" style = "width: 1600px; height: 500px"></div>
+    <style>
+        #map{
+            height: 650px;
+            width: 950px;
+        }
+    </style>
+	ENC222-0115/2018-This is a map to show customised pop ups
+    <div id="map"></div>
     <script>
-            // Creating a map object
         var map = L.map('map').setView([-1.09626573,37.01288458], 13);
         var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 18,
@@ -28,8 +33,7 @@
         marker.bindPopup("<b>This is jkuat!</b>").openPopup();
         var popup = L.popup().setLatLng([-1.093675, 36.998266]).setContent("I am a standalone popup.").openOn(map);
         var popup = L.popup();
-       
+     
     </script>
-    
 </body>
 </html>
